@@ -7,7 +7,7 @@
   <created_user>-</created_user>
   <created_date>2025/01/19 19:21:25.579</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2025/01/19 19:39:02.472</modified_date>
+  <modified_date>2025/01/19 20:28:24.427</modified_date>
   <parameters>
     </parameters>
   <connection>
@@ -592,6 +592,40 @@
       <nr>0</nr>
       <xloc>560</xloc>
       <yloc>48</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Job</name>
+      <description/>
+      <type>JOB</type>
+      <attributes/>
+      <specification_method>filename</specification_method>
+      <job_object_id/>
+      <filename/>
+      <jobname/>
+      <directory/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <expand_remote_job>N</expand_remote_job>
+      <create_parent_folder>N</create_parent_folder>
+      <pass_export>N</pass_export>
+      <run_configuration/>
+      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>544</xloc>
+      <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
