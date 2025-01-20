@@ -3,13 +3,29 @@
   <description/>
   <extended_description/>
   <job_version/>
+  <job_status>0</job_status>
   <directory>/</directory>
   <created_user>-</created_user>
   <created_date>2025/01/19 19:21:25.579</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2025/01/19 20:28:24.427</modified_date>
+  <modified_date>2025/01/20 11:28:40.753</modified_date>
   <parameters>
-    </parameters>
+    <parameter>
+      <name>MyPath</name>
+      <default_value>D:\Programme\video\TU\1Master\4Semester\Business Intelligence\Ass3\BI_assignment3\BI_Projects\BI_59</default_value>
+      <description>Current Path</description>
+    </parameter>
+    <parameter>
+      <name>MyPath1</name>
+      <default_value>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59</default_value>
+      <description>Raphis Path</description>
+    </parameter>
+    <parameter>
+      <name>MyPath2</name>
+      <default_value>D:\Programme\video\TU\1Master\4Semester\Business Intelligence\Ass3\BI_assignment3\BI_Projects\BI_59</default_value>
+      <description>Jakobs Path</description>
+    </parameter>
+  </parameters>
   <connection>
     <name>BI_Bikes_59</name>
     <server>localhost</server>
@@ -386,7 +402,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_Adress.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_Adress.sql</sqlfilename>
       <sendOneStatement>T</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -404,7 +420,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_Country.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_Country.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -422,7 +438,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_Customer.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_Customer.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -440,7 +456,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_OrderStatus.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_OrderStatus.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -458,7 +474,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_ProductTopCategory.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_ProductTopCategory.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -476,7 +492,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_ShipMethod.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_ShipMethod.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -494,7 +510,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_ProductSubCategory.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_ProductSubCategory.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -512,7 +528,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_ProductModel.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_ProductModel.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -530,7 +546,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_Product.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_Product.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -548,13 +564,13 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_SalesOrderDetail.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_SalesOrderDetail.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>240</xloc>
+      <xloc>432</xloc>
       <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
@@ -566,13 +582,13 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_SalesOrderHeader.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_SalesOrderHeader.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>416</xloc>
+      <xloc>224</xloc>
       <yloc>320</yloc>
       <attributes_kjc/>
     </entry>
@@ -584,7 +600,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\task1\oltp_db\TB_Person.sql</sqlfilename>
+      <sqlfilename>${MyPath}\task1\oltp_db\TB_Person.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
@@ -599,7 +615,7 @@
       <description/>
       <type>JOB</type>
       <attributes/>
-      <specification_method>filename</specification_method>
+      <specification_method>rep_name</specification_method>
       <job_object_id/>
       <filename/>
       <jobname/>
@@ -620,6 +636,9 @@
       <create_parent_folder>N</create_parent_folder>
       <pass_export>N</pass_export>
       <run_configuration/>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
       <set_append_logfile>N</set_append_logfile>
       <parallel>N</parallel>
       <draw>Y</draw>
@@ -722,7 +741,7 @@
     </hop>
     <hop>
       <from>TB_Product</from>
-      <to>TB_SalesOrderDetail</to>
+      <to>TB_SalesOrderHeader</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -730,8 +749,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>TB_SalesOrderDetail</from>
-      <to>TB_SalesOrderHeader</to>
+      <from>TB_SalesOrderHeader</from>
+      <to>TB_SalesOrderDetail</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

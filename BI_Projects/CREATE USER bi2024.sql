@@ -15,10 +15,10 @@ FLUSH PRIVILEGES;
 ------------------------------------------------------------------
 -- Step 2. Drop if exists and re-create databases
 -- please make sure you replace XX with YOUR GROUP NUMBER
-DROP DATABASE IF EXISTS BI_Bikes_XX;
-DROP DATABASE IF EXISTS BI_BikesDW_XX;
-CREATE DATABASE IF NOT EXISTS BI_Bikes_XX;
-CREATE DATABASE IF NOT EXISTS BI_BikesDW_XX; 
+DROP DATABASE IF EXISTS BI_Bikes_59;
+DROP DATABASE IF EXISTS BI_BikesDW_59;
+CREATE DATABASE IF NOT EXISTS BI_Bikes_59;
+CREATE DATABASE IF NOT EXISTS BI_BikesDW_59; 
 
 
 

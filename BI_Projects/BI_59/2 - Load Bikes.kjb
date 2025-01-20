@@ -8,12 +8,22 @@
   <created_user>-</created_user>
   <created_date>2025/01/19 19:41:07.876</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2025/01/19 20:28:22.670</modified_date>
+  <modified_date>2025/01/20 15:40:18.908</modified_date>
   <parameters>
     <parameter>
       <name>MyPath</name>
+      <default_value>D:\Programme\video\TU\1Master\4Semester\Business Intelligence\Ass3\BI_assignment3\BI_Projects\BI_59</default_value>
+      <description>Current Path</description>
+    </parameter>
+    <parameter>
+      <name>MyPath1</name>
       <default_value>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59</default_value>
-      <description/>
+      <description>Raphis Path</description>
+    </parameter>
+    <parameter>
+      <name>MyPath2</name>
+      <default_value>D:\Programme\video\TU\1Master\4Semester\Business Intelligence\Ass3\BI_assignment3\BI_Projects\BI_59</default_value>
+      <description>Jakobs Path</description>
     </parameter>
   </parameters>
   <connection>
@@ -385,8 +395,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>208</xloc>
-      <yloc>176</yloc>
+      <xloc>368</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -439,7 +449,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
+      <xloc>544</xloc>
       <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
@@ -520,7 +530,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>832</xloc>
+      <xloc>912</xloc>
       <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
@@ -574,7 +584,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>640</xloc>
+      <xloc>704</xloc>
       <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
@@ -612,7 +622,7 @@
       <attributes/>
       <schemaname/>
       <tablename>TB_SalesOrderDetail</tablename>
-      <filename>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59\csv_data\SalesOrderDetail.csv</filename>
+      <filename>${MyPath}\csv_data\SalesOrderDetail.csv</filename>
       <separator/>
       <enclosed/>
       <escaped/>
@@ -682,8 +692,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1312</xloc>
-      <yloc>80</yloc>
+      <xloc>192</xloc>
+      <yloc>192</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
