@@ -1,0 +1,64 @@
+<Schema name="bike_sales" description="Bikes Sales Cub" measuresCaption="Sales of Bikes">
+  <Dimension type="TimeDimension" visible="true" name="Date">
+    <Hierarchy name="Days" visible="true" hasAll="true" allLevelName="Days" primaryKey="DateKey" primaryKeyTable="Dim_Date" description="Day Dimension HIerachy">
+      <Level name="Day" visible="true" table="Dim_Date" column="DayNumberOfMonth" nameColumn="DayNumberOfMonth" type="Integer" uniqueMembers="false" levelType="TimeDays">
+      </Level>
+      <Level name="Month" visible="true" table="Dim_Date" column="DayNumberOfWeek" nameColumn="DayNumberOfWeek" type="Integer" uniqueMembers="false" levelType="TimeMonths" description="Month Dimension">
+      </Level>
+      <Level name="Year" visible="true" table="Dim_Date" column="CalendarYear" nameColumn="CalendarYear" uniqueMembers="false" levelType="TimeYears">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Location" description="The location Dimensions of Sales">
+    <Hierarchy name="Territory" visible="true" hasAll="true" primaryKey="LocationKey" primaryKeyTable="Dim_Location">
+      <Level name="Region" visible="true" table="Dim_Location" column="Region" nameColumn="Region" type="String" uniqueMembers="false" levelType="Regular" description="Region of the Sale">
+      </Level>
+      <Level name="Country" visible="true" table="Dim_Location" column="Country" nameColumn="Country" type="String" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Product" description="Dimension of Product for Sales">
+    <Hierarchy name="ProductCategory" visible="true" hasAll="true" primaryKey="ProductKey" primaryKeyTable="Dim_Product" description="Hierachy of the Product Categories">
+      <Level name="TopCategory" visible="true" table="Dim_Product" column="ProductTopCategoryName" nameColumn="ProductTopCategoryName" type="String" uniqueMembers="false" description="Top Category of Prod">
+      </Level>
+      <Level name="SubCategory" visible="true" table="Dim_Product" column="ProductSubCategoryName" nameColumn="ProductSubCategoryName" uniqueMembers="false" description="Subcategories of Product ">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Customer ">
+    <Hierarchy name="Age" visible="true" hasAll="true" primaryKey="CustomerKey" primaryKeyTable="Dim_Customer">
+      <Level name="Age" visible="true" table="Dim_Customer" column="Age" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Gender" visible="true" hasAll="true" primaryKey="CustomerKey" primaryKeyTable="Dim_Customer" description="Gender of CUstomer">
+      <Level name="Gender" visible="true" table="Dim_Customer" column="Gender" nameColumn="Gender" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="FullName" visible="true" hasAll="true" primaryKey="CustomerKey" primaryKeyTable="Dim_Customer">
+      <Level name="FullName" visible="true" table="Dim_Customer" column="FullName" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="bike_sales" caption="Bike Sales Cube to get Information about the bikes sales" visible="true" description="Bike Sales Cube" cache="true" enabled="false">
+    <Table name="Fact_InternetSales">
+    </Table>
+    <DimensionUsage source="Customer " name="Customer" visible="true" foreignKey="CustomerKey">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="ProductKey">
+    </DimensionUsage>
+    <DimensionUsage source="Location" name="ShippedTo" visible="true" foreignKey="ShipToLocationKey">
+    </DimensionUsage>
+    <DimensionUsage source="Date" name="OrderDate" visible="true" foreignKey="OrderDateKey">
+    </DimensionUsage>
+    <Measure name="Quantity" column="OrderQty" datatype="Integer" aggregator="sum" description="Quantity of Sales" visible="true">
+    </Measure>
+    <Measure name="Revenue" column="OrderLineTotal" datatype="Numeric" formatString="Currency" aggregator="sum" description="Revenue of Sales" visible="true">
+    </Measure>
+    <Measure name="Profit" column="OrderLineProfit" datatype="String" formatString="Currency" aggregator="sum" description="Profit" visible="true">
+    </Measure>
+    <Measure name="TaxAmount" column="OrderLineTaxAmt" datatype="Numeric" formatString="Currency" aggregator="sum" description="Amount of Tax " visible="true">
+    </Measure>
+    <Measure name="ShippingCost" column="OrderLineShippingCost" datatype="Numeric" formatString="Currency" aggregator="sum" description="Cost of Shipping" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
