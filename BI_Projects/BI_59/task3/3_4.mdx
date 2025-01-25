@@ -1,0 +1,7 @@
+SELECT {Measures.[Quantity]} ON COLUMNS, 
+NON EMPTY
+TopCount(Order([Customer.FullName].[FullName].MEMBERS, Measures.[Quantity], BDESC),5) ON ROWS 
+FROM [bike_sales]
+WHERE ( 
+    {[ShippedTo.Territory].[Region].&[Europe]}
+)
