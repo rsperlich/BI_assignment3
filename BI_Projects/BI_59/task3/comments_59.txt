@@ -1,0 +1,21 @@
+Possible imperfections or improvements would include:
+
+High cardinality in Dimension like Customer or Product, seperate fact tables for subsets could improve the Performance
+
+The fact table is generaly very wide, since it stores many fields it could slow down the ETL processes.
+
+Since some dimensions are normalized (e.g., ProductSubCategory and ProductTopCategory) the query Performance could suffer due to additional joins
+
+How could These be improved?
+We could flatten the Dimensions by combining Product, ProductSubCategory, and ProductTopCategory.
+
+Further, we could Partition the Fact tables to e.g. a Fact_InternetSales_Domestic for domestic customers and Fact_InternetSales_International for international customers.
+
+
+To address the wideness we could: 
+
+Remove derived fields (e.g., OrderLineProfit, OrderLineTaxAmount) from the fact table.
+
+Or
+
+Develop summary fact tables that store pre-calculated aggregates (e.g., monthly revenue by region).

@@ -8,11 +8,11 @@
   <created_user>-</created_user>
   <created_date>2025/01/20 18:42:21.352</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2025/01/22 14:09:07.109</modified_date>
+  <modified_date>2025/01/26 10:17:03.861</modified_date>
   <parameters>
     <parameter>
       <name>MyPath</name>
-      <default_value>D:\Programme\video\TU\1Master\4Semester\Business Intelligence\Ass3\BI_assignment3\BI_Projects\BI_59</default_value>
+      <default_value>C:\Users\rapha\OneDrive\Desktop\Uni\Business intelligence\Assignment3\BI_Projects\BI_59</default_value>
       <description>Current Path</description>
     </parameter>
     <parameter>
@@ -27,11 +27,11 @@
     </parameter>
   </parameters>
   <connection>
-    <name>BI_BikesDW_59</name>
+    <name>BI_Bikes_59</name>
     <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>BI_BikesDW_59</database>
+    <database>BI_Bikes_59</database>
     <port>3306</port>
     <username>bi2024</username>
     <password>Encrypted 2be98afc86aa7f2e4a910fc208cc6989b</password>
@@ -77,8 +77,7 @@
       </attribute>
       <attribute>
         <code>SQL_CONNECT</code>
-        <attribute>SET GLOBAL local_infile = 'ON';
-</attribute>
+        <attribute>SET GLOBAL local_infile = 'ON';</attribute>
       </attribute>
       <attribute>
         <code>STREAM_RESULTS</code>
@@ -405,7 +404,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>${MyPath}\task2\etl_sales\ETL_Dim_Customer.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection>BI_BikesDW_59</connection>
+      <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -423,7 +422,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>${MyPath}\task2\etl_sales\ETL_Dim_Location.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection>BI_BikesDW_59</connection>
+      <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -441,7 +440,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>${MyPath}\task2\etl_sales\ETL_Dim_Product.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection>BI_BikesDW_59</connection>
+      <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -459,7 +458,7 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>${MyPath}\task2\etl_sales\ETL_Dim_Date.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection>BI_BikesDW_59</connection>
+      <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
@@ -477,12 +476,24 @@
       <sqlfromfile>T</sqlfromfile>
       <sqlfilename>${MyPath}\task2\etl_sales\ETL_Fact_InternetSales.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
-      <connection>BI_BikesDW_59</connection>
+      <connection>BI_Bikes_59</connection>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>400</xloc>
       <yloc>256</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>528</xloc>
+      <yloc>272</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -526,6 +537,15 @@
     <hop>
       <from>ETL_Dim_Date</from>
       <to>ETL_Fact_InternetSales</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ETL_Fact_InternetSales</from>
+      <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
